@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+    width: 1440px;
     * {
         margin: 0;
         padding: 0;

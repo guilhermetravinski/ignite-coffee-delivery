@@ -32,4 +32,8 @@ export const CartContainer = styled.a`
   flex-direction: row;
   align-items: center;
   gap: 0.75rem;
+  background: ${(props) => props.theme['yellow-light']};
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
 `
