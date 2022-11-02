@@ -2,30 +2,37 @@ import {
   ActionsContainer,
   CartContainer,
   HeaderContainer,
+  HeaderContent,
   LocationContainer,
 } from './styles'
 
-import logoCoffee from '../../assets/Logo.svg'
+import coffeeDeliveryLogo from '../../assets/Logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { defaultTheme } from '../../styles/themes/default'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logoCoffee} height="40px" alt="" />
-      <ActionsContainer>
-        <LocationContainer>
-          <MapPin size={22} weight="fill" color={defaultTheme.purple} />
-          Ponta Grossa
-        </LocationContainer>
-        <CartContainer>
-          <ShoppingCart
-            size={22}
-            weight="fill"
-            color={defaultTheme['yellow-dark']}
-          />
-        </CartContainer>
-      </ActionsContainer>
+      <HeaderContent>
+        <NavLink to="/">
+          <img src={coffeeDeliveryLogo} alt="" />
+        </NavLink>
+
+        <ActionsContainer>
+          <LocationContainer>
+            <MapPin size={22} weight="fill" color={defaultTheme.purple} />
+            Ponta Grossa
+          </LocationContainer>
+          <CartContainer>
+            <ShoppingCart
+              size={22}
+              weight="fill"
+              color={defaultTheme['yellow-dark']}
+            />
+          </CartContainer>
+        </ActionsContainer>
+      </HeaderContent>
     </HeaderContainer>
   )
 }
