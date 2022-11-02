@@ -1,6 +1,5 @@
 import {
-  ActionsContainer,
-  CartContainer,
+  GoToCartButton,
   HeaderContainer,
   HeaderContent,
   LocationContainer,
@@ -8,30 +7,30 @@ import {
 
 import coffeeDeliveryLogo from '../../assets/Logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
-import { defaultTheme } from '../../styles/themes/default'
 import { NavLink } from 'react-router-dom'
 
 export function Header() {
+  // const { cartItems } = useCart()
+  const cartItems = []
+
   return (
     <HeaderContainer>
-      <HeaderContent>
+      <HeaderContent className="container">
         <NavLink to="/">
           <img src={coffeeDeliveryLogo} alt="" />
         </NavLink>
 
-        <ActionsContainer>
+        <div>
           <LocationContainer>
-            <MapPin size={22} weight="fill" color={defaultTheme.purple} />
-            Ponta Grossa
+            <MapPin size={22} weight="fill" />
+            <span>Ponta Grossa, PR</span>
           </LocationContainer>
-          <CartContainer>
-            <ShoppingCart
-              size={22}
-              weight="fill"
-              color={defaultTheme['yellow-dark']}
-            />
-          </CartContainer>
-        </ActionsContainer>
+
+          <GoToCartButton to="/cart">
+            <ShoppingCart size={22} weight="fill" />
+            {cartItems.length > 0 && <span>{cartItems.length}</span>}
+          </GoToCartButton>
+        </div>
       </HeaderContent>
     </HeaderContainer>
   )

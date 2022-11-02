@@ -1,11 +1,8 @@
-import { ImageContainer, IntroContainer, TitleContainer } from './styles'
-import introBackground from '../../assets/Background.svg'
+import { IntroContainer, TitleContainer } from './styles'
 
-export function Intro() {
+export function Home() {
   return (
     <IntroContainer>
-      <img src={introBackground} alt="" />
-      <ImageContainer />
       <TitleContainer>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
         <h2>

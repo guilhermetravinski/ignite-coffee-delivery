@@ -1,11 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-    width: 1440px;
     * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        outline: none;
+        
     }
 
     :focus {
@@ -15,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
 
     body { 
         background-color: ${(props) => props.theme.background};
-        color: ${(props) => props.theme.white};
         -webkit-font-smoothing: antialiased;
     }
 
