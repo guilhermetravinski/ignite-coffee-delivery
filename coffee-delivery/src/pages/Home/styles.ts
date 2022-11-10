@@ -1,58 +1,68 @@
 import styled from 'styled-components'
-import CoffeIntro from '../../assets/CoffeIntro.png'
 
-export const IntroContainer = styled.main`
-  position: absolute;
-  height: 544px;
-  left: 0px;
-  right: 0px;
-  top: 104px;
-  background: ${(props) => props.theme['purple-light']};
+export const HomeContainer = styled.main`
+  margin-bottom: 9.75rem;
+  margin-top: 5.875rem;
+  padding: 0 1rem;
 `
 
-export const ImageContainer = styled.img`
-  position: absolute;
-  width: 476px;
-  height: 360px;
-  left: calc(50% - 476px / 2 + 322px);
-  top: calc(50% - 360px / 2);
-  border-image: 0;
-  background: url(${CoffeIntro});
-`
-
-export const TitleContainer = styled.div`
+export const IntroContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 16px;
+  gap: 3.5rem;
 
-  position: absolute;
-  width: 588px;
-  height: 192px;
-  left: calc(50% - 588px / 2 - 266px);
-  top: calc(50% - 192px / 2 - 82px);
-
-  h1 {
-    font-family: 'Baloo 2', cursive;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 130%;
-
-    color: ${(props) => props.theme['base-title']};
+  img {
+    width: 29.75rem;
+    height: 22.5rem;
   }
 
-  h2 {
-    width: 588px;
-    height: 52px;
+  @media (max-width: 720px) {
+    > img {
+      display: none;
+    }
+  }
+`
+export const IntroLeftContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4.125rem;
 
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 130%;
+  div {
+    > h1 {
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 3.875rem;
+      color: ${(props) => props.theme.colors['base-title']};
+    }
 
-    color: ${(props) => props.theme['base-subtitle']};
+    > p {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: ${(props) => props.theme.colors['base-subtitle']};
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 14.5rem 1fr;
+    grid-row-gap: 1.25rem;
+    grid-column-gap: 2.5rem;
+
+    @media (max-width: 720px) {
+      & {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+`
+
+export const IntroLeftListItem = styled.li`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+
+  p {
+    line-height: 21px;
   }
 `

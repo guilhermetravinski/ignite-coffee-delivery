@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
 
   height: 6.5rem;
-  background: ${(props) => props.theme.background};
+  background: ${(props) => props.theme.colors.background};
 
   display: flex;
   align-items: center;
@@ -49,10 +49,10 @@ export const LocationContainer = styled.div`
   border-radius: 6px;
   padding: 0.5rem;
 
-  background: ${(props) => props.theme['purple-light']};
+  background: ${(props) => props.theme.colors['purple-light']};
 
   > span {
-    color: ${(props) => props.theme['purple-dark']};
+    color: ${(props) => props.theme.colors['purple-dark']};
 
     font-size: 0.875rem;
     font-weight: 400;
@@ -60,7 +60,7 @@ export const LocationContainer = styled.div`
   }
 
   > svg {
-    color: ${(props) => props.theme.purple};
+    color: ${(props) => props.theme.colors.purple};
   }
 `
 
@@ -79,8 +79,8 @@ export const GoToCartButton = styled(NavLink)`
   border: none;
   border-radius: 6px;
 
-  background: ${(props) => props.theme['yellow-light']};
-  color: ${(props) => props.theme['yellow-dark']};
+  background: ${(props) => props.theme.colors['yellow-light']};
+  color: ${(props) => props.theme.colors['yellow-dark']};
 
   cursor: pointer;
 
@@ -96,8 +96,8 @@ export const GoToCartButton = styled(NavLink)`
 
     border-radius: 9999px;
 
-    background: ${(props) => props.theme['yellow-dark']};
-    color: ${(props) => props.theme.white};
+    background: ${(props) => props.theme.colors['yellow-dark']};
+    color: ${(props) => props.theme.colors.white};
 
     top: -0.625rem;
     right: -0.625rem;
