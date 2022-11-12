@@ -2,6 +2,7 @@ import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 import coffeeDeliveryHome from '../../assets/coffee-delivery-home.svg'
 import { RoundedIcon } from '../../components/RoundedIcon'
+import { CoffeeList } from './components/CoffeeList'
 import {
   HomeContainer,
   IntroContainer,
@@ -31,16 +32,13 @@ export function Home() {
               />
               <p>Compra simples e segura</p>
             </IntroLeftListItem>
-
             <IntroLeftListItem>
               <RoundedIcon
                 bgColor={colors['base-text']}
                 icon={<Package weight="fill" />}
               />
-
               <p>Embalagem mantém o café intacto</p>
             </IntroLeftListItem>
-
             <IntroLeftListItem>
               <RoundedIcon
                 bgColor={colors.yellow}
@@ -48,7 +46,6 @@ export function Home() {
               />
               <p>Entrega rápida e rastreada</p>
             </IntroLeftListItem>
-
             <IntroLeftListItem>
               <RoundedIcon
                 bgColor={colors.purple}
@@ -60,6 +57,7 @@ export function Home() {
         </IntroLeftContainer>
         <img src={coffeeDeliveryHome} alt="" />
       </IntroContainer>
+      <CoffeeList />
     </HomeContainer>
   )
 }

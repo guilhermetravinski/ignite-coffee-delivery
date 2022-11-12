@@ -1,3 +1,4 @@
+import coffeeDeliveryLogo from '../../assets/coffee-delivery-logo.svg'
 import {
   GoToCartButton,
   HeaderContainer,
@@ -5,13 +6,11 @@ import {
   LocationContainer,
 } from './styles'
 
-import coffeeDeliveryLogo from '../../assets/Logo.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
-
+import { useCart } from '../../hooks/useCart'
 export function Header() {
-  // const { cartItems } = useCart()
-  const cartItems = []
+  const { cartItems } = useCart()
 
   return (
     <HeaderContainer>
@@ -28,7 +27,7 @@ export function Header() {
 
           <GoToCartButton to="/cart">
             <ShoppingCart size={22} weight="fill" />
-            {cartItems.length > 0 && <span>{cartItems.length}</span>}
+            !--{cartItems.length > 0 && <span>{cartItems.length}</span>}
           </GoToCartButton>
         </div>
       </HeaderContent>
