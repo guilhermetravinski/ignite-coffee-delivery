@@ -18,7 +18,7 @@ export const RoundedIconContainer = styled.div<RoundedIconContainerProps>`
   background: ${({ bgColor }) => bgColor};
 
   > svg {
-    color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors['base-background']};
     width: 1rem;
     height: 1rem;
   }

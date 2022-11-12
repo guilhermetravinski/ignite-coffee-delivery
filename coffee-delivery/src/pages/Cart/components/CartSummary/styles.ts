@@ -60,7 +60,7 @@ export const DeleteButton = styled.button`
   }
 
   > svg {
-    color: ${(props) => props.theme.colors.purple};
+    color: ${(props) => props.theme.colors['brand-purple']};
   }
 `
 
@@ -108,7 +108,7 @@ export const CheckoutButton = styled.button`
   border-radius: 6px;
   border: none;
 
-  background: ${(props) => props.theme.colors.yellow};
+  background: ${(props) => props.theme.colors['brand-yellow']};
   color: ${(props) => props.theme.colors.white};
 
   font-weight: 700;
@@ -124,6 +124,6 @@ export const CheckoutButton = styled.button`
   }
 
   &:not(:disabled):hover {
-    background: ${(props) => props.theme.colors['yellow-dark']};
+    background: ${(props) => props.theme.colors['brand-yellow-dark']};
   }
 `

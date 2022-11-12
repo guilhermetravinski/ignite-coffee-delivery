@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
   width: 100%;
-
   height: 6.5rem;
-  background: ${(props) => props.theme.colors.background};
+
+  background: ${({ theme }) => theme.colors['base-background']};
 
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 1 rem;
+  padding: 0 1rem;
 
   > a {
     width: 5.309375rem;
@@ -46,13 +46,13 @@ export const LocationContainer = styled.div`
   align-items: center;
   gap: 0.25rem;
 
-  border-radius: 6px;
   padding: 0.5rem;
+  border-radius: 6px;
 
-  background: ${(props) => props.theme.colors['purple-light']};
+  background: ${(props) => props.theme.colors['brand-purple-light']};
 
   > span {
-    color: ${(props) => props.theme.colors['purple-dark']};
+    color: ${(props) => props.theme.colors['brand-purple-dark']};
 
     font-size: 0.875rem;
     font-weight: 400;
@@ -60,13 +60,13 @@ export const LocationContainer = styled.div`
   }
 
   > svg {
-    color: ${(props) => props.theme.colors.purple};
+    color: ${(props) => props.theme.colors['brand-purple']};
   }
 `
 
 export const GoToCartButton = styled(NavLink)`
   display: flex;
-  align-items: center;
+  justify-content: center;
   align-items: center;
 
   position: relative;
@@ -79,8 +79,8 @@ export const GoToCartButton = styled(NavLink)`
   border: none;
   border-radius: 6px;
 
-  background: ${(props) => props.theme.colors['yellow-light']};
-  color: ${(props) => props.theme.colors['yellow-dark']};
+  background: ${(props) => props.theme.colors['brand-yellow-light']};
+  color: ${(props) => props.theme.colors['brand-yellow-dark']};
 
   cursor: pointer;
 
@@ -93,10 +93,9 @@ export const GoToCartButton = styled(NavLink)`
 
     width: 1.25rem;
     height: 1.25rem;
-
     border-radius: 9999px;
 
-    background: ${(props) => props.theme.colors['yellow-dark']};
+    background: ${(props) => props.theme.colors['brand-yellow-dark']};
     color: ${(props) => props.theme.colors.white};
 
     top: -0.625rem;

@@ -21,6 +21,7 @@ export const IntroContainer = styled.div`
     }
   }
 `
+
 export const IntroLeftContainer = styled.div`
   display: flex;
   flex-direction: column;

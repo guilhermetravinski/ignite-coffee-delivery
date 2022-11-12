@@ -28,8 +28,8 @@ export const CoffeeCardContainer = styled.li`
 
       border-radius: 100px;
 
-      background: ${(props) => props.theme.colors['yellow-light']};
-      color: ${(props) => props.theme.colors['yellow-dark']};
+      background: ${(props) => props.theme.colors['brand-yellow-light']};
+      color: ${(props) => props.theme.colors['brand-yellow-dark']};
 
       text-transform: uppercase;
       font-weight: 700;
@@ -100,13 +100,13 @@ export const CardFooter = styled.footer`
       border: none;
       border-radius: 6px;
 
-      background: ${(props) => props.theme.colors['purple-dark']};
+      background: ${(props) => props.theme.colors['brand-purple-dark']};
       color: ${(props) => props.theme.colors['base-card']};
 
       transition: background-color 0.2s;
 
       &:hover {
-        background: ${(props) => props.theme.colors.purple};
+        background: ${(props) => props.theme.colors['brand-purple']};
       }
     }
   }

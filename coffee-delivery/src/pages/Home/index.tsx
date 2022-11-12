@@ -27,7 +27,7 @@ export function Home() {
           <ul>
             <IntroLeftListItem>
               <RoundedIcon
-                bgColor={colors['yellow-dark']}
+                bgColor={colors['brand-yellow-dark']}
                 icon={<ShoppingCart weight="fill" />}
               />
               <p>Compra simples e segura</p>
@@ -41,14 +41,14 @@ export function Home() {
             </IntroLeftListItem>
             <IntroLeftListItem>
               <RoundedIcon
-                bgColor={colors.yellow}
+                bgColor={colors['brand-yellow']}
                 icon={<Timer weight="fill" />}
               />
               <p>Entrega rápida e rastreada</p>
             </IntroLeftListItem>
             <IntroLeftListItem>
               <RoundedIcon
-                bgColor={colors.purple}
+                bgColor={colors['brand-purple']}
                 icon={<Coffee weight="fill" />}
               />
               <p>O café chega fresquinho até você</p>

@@ -12,8 +12,8 @@ export const CardHeaderContainer = styled.div<CardHeaderContainerProps>`
   > svg {
     color: ${(props) =>
     props.isDefaultColor
-      ? props.theme.colors['yellow-dark']
-      : props.theme.colors.purple};
+      ? props.theme.colors['brand-yellow-dark']
+      : props.theme.colors['brand-purple']};
   }
 
   > div {

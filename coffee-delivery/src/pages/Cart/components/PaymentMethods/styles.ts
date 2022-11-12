@@ -41,13 +41,13 @@ export const PaymentOptionButton = styled.button<PaymentOptionButtonProps>`
 
   border: 1px solid
     ${(props) =>
-    props.isActive ? props.theme.colors.purple : 'transparent'};
+    props.isActive ? props.theme.colors['brand-purple'] : 'transparent'};
   border-radius: 6px;
 
   color: ${(props) => props.theme.colors['base-text']};
   background: ${(props) =>
     props.isActive
-      ? props.theme.colors['purple-light']
+      ? props.theme.colors['brand-purple-light']
       : props.theme.colors['base-button']};
 
 
@@ -64,7 +64,7 @@ export const PaymentOptionButton = styled.button<PaymentOptionButtonProps>`
   }
 
   > svg {
-    color: ${(props) => props.theme.colors.purple};
+    color: ${(props) => props.theme.colors['brand-purple']};
   }
 `
 

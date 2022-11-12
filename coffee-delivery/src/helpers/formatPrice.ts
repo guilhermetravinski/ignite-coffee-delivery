@@ -7,7 +7,7 @@ export function convertPriceToText(price: number): string {
 
   priceText = priceText.replace('.', ',')
 
-  const [, afterCommaValue] = priceText.split(',')
+  const [_, afterCommaValue] = priceText.split(',')
 
   if (afterCommaValue.length === 1) {
     return priceText.concat('0')

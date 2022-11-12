@@ -14,7 +14,7 @@ export const ItemCounterButtonContainer = styled.div`
   background: ${(props) => props.theme.colors['base-button']};
 
   > button {
-    color: ${(props) => props.theme.colors.purple};
+    color: ${(props) => props.theme.colors['brand-purple']};
     font-weight: bold;
     border: none;
     background: none;
@@ -27,7 +27,7 @@ export const ItemCounterButtonContainer = styled.div`
     }
 
     &:not(:disabled):hover {
-      color: ${(props) => props.theme.colors['purple-dark']};
+      color: ${(props) => props.theme.colors['brand-purple-dark']};
     }
   }
 
